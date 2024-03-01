@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Monetree</title>
+  </head>
+  <body>
+    <form class="login-form">
+      <h3 class="log-in-form__title">Login Here</h3>
+
+      <label for="username">Username</label>
+      <input type="text" placeholder="Email or Phone" id="username" />
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" />
+
+      <button type="submit" class="login-btn">Log In</button>
+    </form>
+    <div class="app__container hide">
+      <div class="app__header">
+        <div class="app__logo">
+          <span>Monetree</span><sup><span>App</span></sup>
+        </div>
+        <ul class="app__menu">
+          <li class="app__menu--item">Overview</li>
+          <li class="app__menu--item">Payments</li>
+          <li class="app__menu--item">Cards</li>
+          <li class="app__menu--item">Account</li>
+          <li class="app__menu--item">System</li>
+          <li class="app__menu--item">Business</li>
+        </ul>
+        <div class="app__user">
+          <div class="app__user-profile">
+            <h3 class="user-name">Yishai Rose</h3>
+            <div class="user-image-container">
+              <img src="" alt="profile picture" />
+            </div>
+          </div>
+          <div class="app__user-icons">
+            <div class="user-icons__logout">
+              <span class="material-symbols-outlined"> logout </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-main">
+        <div class="app__navigation">
+          <ul class="app__navigation-tabs">
+            <li class="tab-item"><a href="#" class="tab-link">Dashboard</a></li>
+            <li class="tab-item"><a href="#" class="tab-link">Scheduled</a></li>
+            <li class="tab-item"><a href="#" class="tab-link">Transfers</a></li>
+            <li class="tab-item"><a href="#" class="tab-link">SWIFT</a></li>
+            <li class="tab-item"><a href="#" class="tab-link">Exchange</a></li>
+          </ul>
+          <div class="app__navigation-logout-timer"></div>
+        </div>
+        <div class="app__primary-section">
+          <div class="account-ballance-section">
+            <div class="balance-container">
+              <h2 class="current-ballance-heading">
+                Current Ballance<span>As of 02/12/2023, 18:58</span>
+              </h2>
+              <h2 class="current-balance">$25 952,59</h2>
+            </div>
+            <div class="card-container">
+              <div class="card card--money-in">
+                <h3>In</h3>
+                <h2>$27 035,20</h2>
+              </div>
+              <div class="card card--money-out">
+                <h3>Out</h3>
+                <h2>$1082,61</h2>
+              </div>
+              <div class="card card--interest">
+                <h3>Interest</h3>
+                <h2>$323,46</h2>
+              </div>
+            </div>
+          </div>
+          <div class="transaction-section">
+            <div class="transaction-header-container">
+              <h2 class="transaction-header">Latest Transfers</h2>
+              <div class="filter-icons">
+                <div class="filter-icons-sort">&darr;</div>
+              </div>
+            </div>
+            <div class="transaction-container">
+              <!-- <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="deposit-tag">1. Deposit</span>
+                </div>
+
+                <div class="amount">- $ 550</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="deposit-tag">2. Deposit</span>
+                </div>
+                <div class="amount">- $ 120</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="withdrawal-tag">3. Withdrawal</span>
+                </div>
+                <div class="amount">- $ 70</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="withdrawal-tag">4. Withdrawal</span>
+                </div>
+                <div class="amount">- $ 70</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="withdrawal-tag">5. Withdrawal</span>
+                </div>
+
+                <div class="amount">- $ 70</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-type">
+                  <span class="deposit-tag">6. Deposit</span>
+                </div>
+
+                <div class="amount">- $ 70</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="new-transaction-section">
+            <div class="new-transaction__header-container">
+              <h2 class="new-transaction__header">New Transaction</h2>
+              <p class="new-transaction__header--sub">
+                Choose transaction type:
+              </p>
+            </div>
+            <div class="new-transaction__container">
+              <div class="new-transaction__item">
+                <div
+                  class="new-transaction__card new-transaction__card--transfer"
+                >
+                  <h6 class="new-transaction__card-title">Transfer Money</h6>
+                </div>
+                <form action="#" class="form form--transfer">
+                  <input type="text" id="transfer-to" />
+                  <input type="number" name="amount" id="amount" />
+                  <button class="new-transation-btn">&rarr;</button>
+                  <label for="transfer-to">Transfer To:</label>
+                  <label for="amount">Amount:</label>
+                </form>
+              </div>
+              <div class="new-transaction__item">
+                <div
+                  class="new-transaction__card new-transaction__card--request"
+                >
+                  <h6 class="new-transaction__card-title">Request Loan</h6>
+                </div>
+                <form action="#" class="form form--loan">
+                  <input type="text" id="request-loan" />
+                  <button class="new-transation-btn">&rarr;</button>
+                  <div></div>
+                  <label for="request-loan">Amount:</label>
+                </form>
+              </div>
+              <div class="new-transaction__item">
+                <div class="new-transaction__card new-transaction__card--close">
+                  <h6 class="new-transaction__card-title">Close Account</h6>
+                </div>
+                <form action="#" class="form form--close">
+                  <input type="text" id="confirm-user" />
+                  <input type="number" name="pin" id="confirm-pin" />
+                  <button class="new-transation-btn">&rarr;</button>
+                  <label for="confirm-user">Confirm User:</label>
+                  <label for="pin">Confirm Pin:</label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
